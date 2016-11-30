@@ -1,10 +1,11 @@
 {
   "name": "async-test-tools",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Set of simple helpers for testing TS/JS asynchronous code",
   "main": "./lib/async-test-tools.js",
   "types": "./lib/async-test-tools.d.js",
   "scripts": {
+    "prepublish": "./node_modules/typescript/bin/tsc",
     "test": "./node_modules/mocha/bin/mocha -r ts-node/register test/*ts"
   },
   "author": "Sergei Chertkov",
