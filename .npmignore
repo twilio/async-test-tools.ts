@@ -1,0 +1,6 @@
+.travis.yml
+tsconfig.json
+dist/docs
+src/
+test/
+build
