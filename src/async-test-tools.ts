@@ -1,12 +1,12 @@
 import * as Async from 'async';
 
 export default class EnsuredAsync {
-  static sequence(steps, verify, done) {
+  static sequence(steps : Function[], verify?: Function, done?: Function) {
     return new Promise(function(resolve, reject) {
-      let wrappedSteps = steps.map(f => Async.ensureAsync(next => {
+      let wrappedSteps = steps.map((f:any) => Async.ensureAsync((next:any) => {
         f();
         next();
-      }));
+      }) as AsyncFunction<any, any>);
 
       return Async.series(wrappedSteps, () => {
         try {

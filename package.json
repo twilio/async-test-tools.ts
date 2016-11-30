@@ -1,15 +1,22 @@
 {
   "name": "async-test-tools",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Set of simple helpers for testing TS/JS asynchronous code",
+  "main": "./lib/async-test-tools.js",
+  "types": "./lib/async-test-tools.d.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/mocha/bin/mocha -r ts-node/register test/*ts"
   },
-  "author": "",
+  "author": "Sergei Chertkov",
   "license": "ISC",
   "devDependencies": {
+    "@types/chai": "^3.4.34",
+    "@types/chai-as-promised": "0.0.29",
+    "@types/mocha": "^2.2.33",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
     "mocha": "^3.2.0",
+    "ts-node": "^1.7.0",
     "typescript": "^2.0.10"
   },
   "dependencies": {
