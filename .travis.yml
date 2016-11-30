@@ -3,3 +3,10 @@ sudo: false
 node_js:
   - '5'
   - '6'
+
+deploy:
+  provider: npm
+  email: ${AUTHOR_EMAIL_ADDR}
+  api_key: ${AUTHOR_NPM_API_KEY}
+  on:
+    branch: master
