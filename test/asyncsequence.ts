@@ -1,5 +1,5 @@
 import 'mocha';
-import Async from '../src/async-test-tools';
+import { Async } from '../src/async-test-tools';
 
 import * as chai from 'chai';
 import * as chaiAsPromised from 'chai-as-promised';

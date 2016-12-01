@@ -1,14 +1,14 @@
-import * as Async from 'async';
+import * as _Async from 'async';
 
-export default class EnsuredAsync {
+export class Async {
   static sequence(steps : Function[], verify?: Function, done?: Function) {
     return new Promise(function(resolve, reject) {
-      let wrappedSteps = steps.map((f:any) => Async.ensureAsync((next:any) => {
+      let wrappedSteps = steps.map((f:any) => _Async.ensureAsync((next:any) => {
         f();
         next();
       }) as AsyncFunction<any, any>);
 
-      return Async.series(wrappedSteps, () => {
+      return _Async.series(wrappedSteps, () => {
         try {
           if (verify) { verify(); }
           if (done) { done(); }
