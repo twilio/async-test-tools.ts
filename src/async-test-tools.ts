@@ -1,6 +1,6 @@
 import * as _Async from 'async';
 
-export class Async {
+class Async {
   static sequence(steps : Function[], verify?: Function, done?: Function) {
     return new Promise(function(resolve, reject) {
       let wrappedSteps = steps.map((f:any) => _Async.ensureAsync((next:any) => {
@@ -34,4 +34,7 @@ export class Async {
     });
   }
 }
+
+export default Async;
+export { Async };
 
