@@ -1,6 +1,6 @@
 {
   "name": "async-test-tools",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Set of simple helpers for testing TS/JS asynchronous code",
   "main": "./lib/async-test-tools.js",
   "types": "./lib/async-test-tools.d.ts",
@@ -14,6 +14,7 @@
     "@types/chai": "^3.4.34",
     "@types/chai-as-promised": "0.0.29",
     "@types/mocha": "^2.2.33",
+    "@types/node": "0.0.2",
     "chai": "^3.5.0",
     "chai-as-promised": "^6.0.0",
     "mocha": "^3.2.0",

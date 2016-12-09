@@ -20,5 +20,18 @@ export class Async {
       });
     });
   }
+
+  static waitForEvent(emitter : any, eventName : string, condition? : Function) {
+    return new Promise((resolve, reject) => {
+      function handler() {
+        if (condition && !condition.apply(null, arguments)) { return; }
+        emitter.removeListener(eventName, handler);
+        let args = Array.prototype.slice.call(arguments);
+        resolve(args);
+      }
+
+      emitter.on(eventName, handler);
+    });
+  }
 }
 
