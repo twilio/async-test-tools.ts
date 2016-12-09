@@ -1,7 +1,9 @@
-node_modules
+.npmignore
+.gitignore
 .travis.yml
 tsconfig.json
+node_modules/
 dist/docs
 src/
 test/
-build
+build/
