@@ -1,6 +1,6 @@
 {
   "name": "async-test-tools",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Set of simple helpers for testing TS/JS asynchronous code",
   "main": "./lib/async-test-tools.js",
   "browser": "./browser/async-test-tools.js",
