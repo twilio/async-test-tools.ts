@@ -4,6 +4,7 @@ bin
 dist
 build
 lib
+browser
 *.swp
 .idea
 .vscode
